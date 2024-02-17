@@ -1,2 +1,2 @@
 # Photography-Website
-Beautiful Photography Website Create by Arun Rao
+Beautiful Photography Website Created by Arun Rao

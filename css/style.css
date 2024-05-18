@@ -1,11 +1,28 @@
-/* fonts */
+/* FONTS USED */
 
-/* font-family: 'Poppins', sans-serif;
-font-family: 'Roboto Slab', serif; */
+/* Headings ---> font-family: 'Poppins', sans-serif;
+   Body Content ---> font-family: 'Roboto Slab', serif; */
+
+
+
+/* ROOT CSS */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 
 html {
     scroll-behavior: smooth;
 }
+
+
+
+
+
+/* GLOBAL CSS */
 
 body {
     box-sizing: border-box;
@@ -24,38 +41,65 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-a {
+a, a:hover {
     text-decoration: none;
     color: #fff;
 }
 
-
-
-
-
-/* Similar CSS */
-
-.nav, #mainSection {
+.w-100 {
     width: 100%;
 }
 
-.navLeftSec, .navRightSec {
-    transition: 0.8s;
-    margin-top: -1.1rem;
-}
-
-
-
-
-
-/* Nav CSS */
-
-.nav {
-    height: 160px;
-    width: 100%;
+.flex-space, .flex-center,
+.flex-evenly, .flex-start, 
+.flex-end {
     display: flex;
     align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-space {
+    justify-content: space-between;
+}
+
+.flex-center {
     justify-content: center;
+}
+
+.flex-evenly {
+    justify-content: space-evenly;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.ellipsis {
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+/* NAV CSS */
+
+.nav {
+    height: 145px;
     position: fixed;
     top: 0;
     background-color: transparent;
@@ -71,12 +115,26 @@ a {
  }
 
 .navItems {
-    font-size: 17px;
-    padding: 0.3rem 1.8rem;  
+    font-size: 1.2rem;
 }
 
 
-/* Sidebar CSS For Responsive */
+
+/* NAV SIMILAR CSS */
+
+.navLeftSec, .navRightSec {
+    width: auto;
+    transition: 0.8s;
+    margin: 0 1rem;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+
+
+
+
+/* SIDEBAR CSS FOR RESPONSIVE */
 
 
 .openNavBtn, .closeNavBtn {
@@ -139,7 +197,8 @@ a {
 }
 
 
-/* Nav Logo Animation Effect */
+
+/* NAV LOGO ANIMATION EFFECT */
 
 .navLeft {
     padding-right: 70px;
@@ -159,9 +218,7 @@ a {
 
 
 
-
-
-/* Main Container CSS */
+/* MAIN CONTAINER CSS */
 
 .mainContainer {
     text-align: center;
@@ -171,13 +228,7 @@ a {
 
 
 
-/* Video Section CSS */
-
-.mainVidSec {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* VIDEO SECTION CSS */
 
 .mainImg {
     position: absolute;
@@ -195,25 +246,39 @@ a {
 
 
 
-/* Title Section CSS */
-
-#titleSec {
-    /* background-color: aqua; */
-    /* background-image: url("/Images/back-image.jpg"); */
-    padding: 4rem 16rem;
-}
-
-#titleSec h1, #pricing h2, #contact h2 {
-    font-size: 3rem;
-}
+/* TITLE SECTION CSS */
 
 .typeText {
     color: #888888;
 }
 
-#titleSec p, .priceUpperArea p {
-    font-size: 19px;
+
+
+/* TITLE & PRICING SECTION SAME CSS */
+
+#titleSec,
+.priceUpperArea {
+    width: 65%;
+    margin: auto;
+    padding: 4rem 0;
 }
+
+/* #titleSec, 
+.priceUpperArea {
+
+} */
+
+#titleSec h1,
+#pricing h2, 
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+#titleSec p, .priceUpperArea p {
+    font-size: 1.25rem;
+}
+
 
 
 /* Typing CSS */
@@ -235,11 +300,13 @@ a {
     50% { background-color: transparent; }
     99% { background-color: transparent; }
     100%  { background-color: #000; }
-  }
+}
 
 
 
-/* Scroll Animation CSS */
+
+
+/* SCROLL ANIMATION CSS */
 
 .reveal {
     opacity: 0;
@@ -256,7 +323,7 @@ a {
 
 
 
-/* Video Gallery Section CSS */
+/* VIDEO GALLERY SECTION CSS */
 
 #VideoSec h2, #photoSec h2 {
     font-size: 2rem;
@@ -267,14 +334,10 @@ a {
     width: 20%;
     background: #000;
     border-radius: 10px;
-    margin-top: 0.8rem;
-    margin-bottom: 3rem;
+    margin: 0.8rem auto 3rem;
 }
 
 .videoArea {
-    display:flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
     overflow: hidden;
 }
 
@@ -294,20 +357,22 @@ a {
 
 
 
-/* Pricing Section CSS */
-
-#pricing {
-    padding-bottom: 5rem;
-}
+/* PRICING SECTION CSS */
 
 .priceUpperArea {
-    margin: 4rem 16rem 0;
+    padding: 4rem 0 0;
 }
 
-.videoBtn, .photoBtn, .cardBtn, .inputSubmit {
+.priceBtnSec {
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.videoBtn, .photoBtn, 
+.cardBtn, .inputSubmit {
     color: #818181;
     font-size: 22px;
-    margin: 2rem 2rem 0;
+    /* margin: 2rem 2rem 0; */
     padding: 1.2rem 5rem;
     background: #f4f4f4;
     border-radius: 2rem;
@@ -315,7 +380,8 @@ a {
     transition: .3s;
 }
 
-.videoBtn:hover, .photoBtn:hover, .cardBtn:hover {
+.videoBtn:hover, .photoBtn:hover, .cardBtn:hover,
+.videoBtn.active, .photoBtn.active{
     background-color: #000000e6;
     color: whitesmoke;
     text-shadow: 0 0 10px #FFE, 0 0 10px #fff, 0 0 0px #fff, 0 0 0px #fff, 0 0 111px #fff, 0 0 5px #fff;
@@ -323,13 +389,6 @@ a {
 
 .videoBtn {
     padding: 1.2rem 3rem;
-}
-
-.cinCardSec, .photoCardSec {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    transition: 0.5s;
 }
 
 .cinCard, .photCard {
@@ -374,122 +433,144 @@ a {
     color: #ffffffd6;
 }
 
+.cinCardSec, .photoCardSec {
+    align-items: flex-start;
+    transition: 0.5s;
+    gap: 2rem;
+}
 
 
 
 
 
+/* PHOTO SECTION CSS */
 
-/* Photo Section CSS */
+#photoSec h2 {
+    margin-top: 4rem;
+}
 
 /* Slider CSS */
 
- .mySlider {
+.slide-container {
     position: relative;
-    /* width: 100%;
-    height: 748px;
-    display: flex; */
-    overflow-x: auto;
-    overflow-y: hidden;
+    height: 700px;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* [Internet Explorer 10+] hide Scroll bar */
+    scrollbar-width: none;  /* [Firefox] hide Scroll bar */
 }
 
-/* .imageSlider {
-    
-    /* overflow: hidden; 
-    /* display: none; 
-} */
-
-.sliderImg {
-    position: relative;
-    /* bottom: -6px; */
-    width: 100%;
+.slide-container::-webkit-scrollbar { 
+    display: none;  /* [Safari and Chrome] hide Scroll bar */
 }
 
-.sliderImg img {
-    width: 100%;
-    border-bottom: 1px solid #fff;
-}
-
-#i1, #i2, #i3 {
+.slide {
     display: none;
+    overflow: hidden;
 }
 
-.prev, .next, .navigator {
-    position: absolute;
-    top: 0;
-    font-size: 260px;
-    z-index: 99;
-    cursor: pointer;
+.slide img {
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    animation: slideIn 0.5s forwards;
 }
 
-.prev {
-    left: 0;
+@keyframes slideIn {
+
+    0% {
+        transform: translate(100%);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: translate(0%);
+        opacity: 1;
+    }
+        
 }
 
-.next {
-    right: 0;
+.slide P {
+    font-size: 1.6rem;
+    bottom: 6%;
 }
 
-#i1:checked ~ #sliderItem1,
-#i2:checked ~ #sliderItem2,
-#i1:checked ~ #sliderItem3 {
-    z-index: 9;
+.slide h4 {
+    bottom: 12%;
+    font-size: 3.1rem;
 }
 
-.dash {
-    /* position: relative;
-    width: 3%;
-    border: 3px solid #000; */
-}
-
-/* 
-.sliderText, .sliderIcon {
-    position: absolute;
-    left: 33rem;
-    bottom: 2rem;
+.slide h4, .slide p {
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
     color: #fff;
+    text-shadow: 2px 2px 5px black;
 }
 
-.sliderText h4 {
-    font-size: 2.5rem;
+.slide-container:hover .arrow {
+    display: block;
 }
 
-
-#sliderItem1:checked ~ .sliderItem1 {
-    margin-left: 0;
+.arrow {
+    display: none;
+    user-select: none;
+    font-size: 35px;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.7;
+    border-radius: 50%;
+    padding: 5px 22px;
+    cursor: pointer;
+    bottom: 50%;
+    transform: translateY(50%);
 }
-#sliderItem2:checked ~ .sliderItem2 {
-    margin-left: -40%;
-}
-#sliderItem3:checked ~ .sliderItem3 {
-    margin-left: -80%;
+
+.arrow:hover {
+    color: red;
 }
 
+.prev-arrow {
+    left: 5%;
+}
 
-lable {
-    color: #000;
-} */
+.next-arrow {
+    right: 5%;
+}
 
+.slide img, .slide p,
+.slide h4, .arrow {
+    position: absolute;
+    font-weight: bolder;
+}
 
+.dot {
+    position: relative;
+    top: 95%;
+    cursor: pointer;
+    height: 10px;
+    width: 25px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 40%;
+    border: 1px solid #717171;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
 
-
+.dot.active {
+    background-color: #717171;
+}
 
 
 
 /* Image Gallery CSS */
 
 .imageGallery {
-    display: flex;
     background-color: #000;
     transition: 5s;
 }
 
-/* .imageGallery, .galCol1 {
-    flex-wrap: wrap;
-} */
-
 .galCol1, .galCol2, .galCol3 {
-    display: flex;
     flex-direction: column;
     overflow: hidden;
 }
@@ -504,20 +585,19 @@ lable {
 
 .imageGallery img:hover {
     width: 105%;
-    /* transform: scale(1.1); */
 }
 
 
 
 
 
-/* Contact Section CSS */
+/* CONTACT SECTION CSS */
 
 #contact {
-    height: 500px;
     background: linear-gradient(90deg, rgba(62,61,62,1) 0%, rgba(23,22,22,1) 46%, rgba(42,40,38,1) 100%);
     margin-top: 16px;
-    padding: 2rem 5rem;
+    text-align: center;
+    padding: 3rem 1rem;
 }
 
 #contact h2 {
@@ -525,7 +605,7 @@ lable {
 }
 
 #contact form {
-    padding: 2rem;
+    gap: 2rem;
 }
 
 #contact form input {
@@ -536,12 +616,11 @@ lable {
     border-bottom: 1px solid #fff;
     width: 40%;
     padding: 1rem 0;
-    margin: 1rem 4rem 0 0;
 }
 
 .inputSubmit {
-    margin-top: 3rem!important;
-    font-size: 24px;
+    margin-top: 1rem!important;
+    font-size: 1.5rem;
 }
 
 .inputSubmit:hover {
@@ -555,20 +634,33 @@ input::-webkit-inner-spin-button {
 
 
 
-/* Footer CSS */
 
-footer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+
+/* FOOTER CSS */
+
+.footTop {
+    align-items: flex-start!important;
     color: whitesmoke;
     background-color: #000;
-    text-align: left;
-    padding: 4rem 0;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
 }
 
-footer h4 {
-  font-size: 19px;
+.footTop h4 {
+    font-size: 20px;
+}
+
+.footTop p, 
+.footTop span {
+    font-size: 18px;
+}
+
+.footerCol1, .footerCol3 {
+    text-align: center
+}
+
+.footerCol2 {
+    text-align: left;
 }
 
 .footerCol1 i {
@@ -586,7 +678,7 @@ footer h4 {
 }
 
 footer h4, .footerCol3 p {
-    padding-bottom: 0.5rem;
+    padding-bottom: 10px;
 }
 
 .listDay {
@@ -598,395 +690,8 @@ footer h4, .footerCol3 p {
 }
 
 .footBottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 50px;
     font-size: 16px;
     background: #161B17;
     color: #fff;
-}
-
-
-
-
-
-
-/* Responsive CSS */
-
-@media screen and (max-width: 1380px) {
-
-    #titleSec {
-        padding: 4rem 12rem;
-    }
-
-    .priceUpperArea {
-        margin: 4rem 12rem 0;
-    }
-
-} 
-
-
- @media screen and (max-width: 1252px) {
- 
-    #titleSec {
-        padding: 4rem 10rem;
-    }
-
-    .priceUpperArea {
-        margin: 4rem 10rem 0;
-    } 
-
-
-} 
-
-@media screen and (max-width: 1188px) {
- 
-    #titleSec {
-        padding: 4rem 8rem;
-    }
-
-    .priceUpperArea {
-        margin: 4rem 8rem 0;
-    }
-
-}
-
- @media screen and (max-width: 1124px) {
- 
-    #titleSec {
-        padding: 4rem 6rem;
-    }
-
-    .priceUpperArea {
-        margin: 4rem 6rem 0;
-    }
-
-
-}
-
-@media screen and (max-width: 1060px) {
-
-    #titleSec {
-        padding: 4rem;
-    }
-
-    .footerCol1 {
-        margin-bottom: 5rem;
-    }
- 
-    #contact {
-        height: auto;
-        padding: 2rem 5rem 3rem;
-    }
-
-}
-
-
-@media screen and (max-width: 996px) {
- 
-    #titleSec {
-        padding: 4rem 2rem;
-    }
-
-    html {
-        font-size: 14px;
-    }
-
-    .cinCard p, .photCard p, .navItems {
-        font-size: 16px;
-    }
-
-}
-
-
-@media screen and (max-width: 916px) {
-
-    html {
-        font-size: 12px;
-    }
-
-    #titleSec p, .priceUpperArea p {
-        font-size: 18px;
-    }
-
-    /* #contact {
-        padding: 2rem 5rem 0;
-    }
-
-    #contact form {
-        padding: 3rem 0 0;
-    } */
-
-    .videoBtn, .photoBtn, .cardBtn, .inputSubmit {
-        font-size: 20px!important;
-    }
-
-    .cinCard, .photCard {
-        width: 28%;
-    }
-    /* .footerCol1 {
-        text-align: center;
-    } */
-
-}
-
- @media screen and (max-width: 870px) {
-
-
-    .priceUpperArea {
-        margin: 4rem 4rem 0;
-    }
-
-    .navLeftSec, .navRightSec{
-        visibility: hidden;
-    }
-
-    .openNavBtn, .closeNavBtn {
-        display: block;
-    }
-
-    .openNavBtn {
-        left: 30px;
-    }
-
-    .closeNavBtn {
-        top: 40px;
-        left: 112px;
-        font-size: 45px;
-    }
-
-    .logoAnimation {
-        top: -6px;
-        padding-right: 0;
-        align-items: center;
-    }
-
-
-/* 
-    html {
-        font-size: 10px;
-    } */
- 
-   /* #titleSec h1, #pricing h2, #contact h2 {
-        font-size: 2rem;
-    }
-
-    #VideoSec h2, #photoSec h2 {
-        font-size: 1.5rem;
-    }
-
-    .navItems {
-        padding: 5px 5px;
-    }
-
-    #contact form input {
-        margin: 1rem 1rem 0 0;
-    }*/
-
-} 
-
-
-@media screen and (max-width: 705px) {
-
-    html {
-        font-size: 10px;
-    } 
-
-    #titleSec p, .priceUpperArea p {
-        font-size: 15px;
-    }
-
-    .videoBtn, .photoBtn, .cardBtn, .inputSubmit {
-        font-size: 18px!important;
-    }
-
-    .nav {
-        height: 140px;
-    }
-
-    .logoAnimation {
-        top: -1px!important;
-        width: 250px!important;
-    }
-
-    .navLogo {
-        top: 10rem;
-    }
-
-    .sideBar ul li {
-        font-size: 16px;
-    }
-
-    .closeNavBtn {
-        left: 90px;
-    }
-
-    footer p {
-        font-size: 15px;
-    }
-
-    .footerCol1 {
-        text-align: center;
-    }
-
-}
-
-
-
-@media screen and (max-width: 600px) {
-
-    html {
-        font-size: 8px;
-    }
-
-    /* #titleSec h1, #pricing h2, #contact h2 {
-        font-size: 3.5rem;
-    } */
-
-    #VideoSec h2, #photoSec h2 {
-        font-size: 2.3rem;
-    }
-
-    .closeNavBtn {
-        left: 70px;
-    }
-
-    .cinCard, .photCard {
-        width: 40%;
-        margin-bottom: 30px;
-    }
-
-    .flexItem, .flex1, .flex2 {
-        width: 100%;
-        height: 42rem;
-        margin-bottom: 2px;
-    }
-
-    .imageGallery {
-        flex-wrap: wrap;
-    }
-
-    .imageGallery img,
-    .imageGallery img:hover { 
-        width: 99%;
-    } 
-
-
-}
-
-@media screen and (max-width: 500px) {
-
-    .nav {
-        height: 120px;
-    }
-
-    .logoAnimation {
-        top: 0px!important;
-        width: 208px!important;
-    }
-
-    .mainVidSec {
-        overflow: hidden;
-    }
-
-    #myVideo {
-        max-width: none;
-        height: 100vh;
-    }
-    
-    .navLogo {
-        top: 24rem;
-        width: 50rem;
-    }
-
-    .videoBtn, .photoBtn {
-        margin: 2rem 0.5rem 0;
-    }
-
-    .footerCol2 {
-        margin-bottom: 3rem;
-    }
-
-    .footerCol2, .footerCol3 {
-        text-align: center;
-    }
-
-}
-
-@media screen and (max-width: 467px) {
-
-    #titleSec h1, #pricing h2, #contact h2 {
-        font-size: 4rem;
-    }
-
-    #VideoSec h2, #photoSec h2 {
-        font-size: 2.5rem;
-    }
-
-    .cinCard, .photCard {
-        width: 70%;
-        margin-bottom: 20px;
-    }
-
-    .cinCard p, .photCard p {
-        padding: 2.5rem 0;
-    }
-
-    .cardBtn {
-        margin: 2rem;
-    }
-
-    #contact {
-        padding: 2rem 1rem 3rem;
-    }
-
-}
-
-@media screen and (max-width: 405px) {
-
-    .priceUpperArea {
-        margin: 4rem 2rem 0;
-    }
-
-    .videoBtn, .photoBtn {
-        font-size: 20px!important;
-    }
-
-    .videoBtn {
-        padding: 1.2rem 6rem;
-    }
-
-    .photoBtn {
-        padding: 1.2rem 8rem;
-    }
-
-}
-
-@media screen and (max-width: 375px) {
-
-    #titleSec h1, #pricing h2, #contact h2 {
-        font-size: 3.5rem;
-    }
-
-    .openNavBtn {
-        left: 45px;
-    }
-
-    .priceUpperArea {
-        margin: 4rem 2rem 0;
-    }
-
-    .cinCard, .photCard {
-        width: 80%;
-    }
-
-    #contact form {
-        padding: 2rem 0 2rem 2rem;
-    }
-
-    #contact form input {
-        margin: 1rem 2rem 0 0;
-    }
-
 }

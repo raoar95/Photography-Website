@@ -1,0 +1,189 @@
+/* Responsive CSS */
+
+ @media screen and (max-width: 850px) {
+
+    html {
+        font-size: 14px;
+    }
+
+} 
+
+@media screen and (max-width: 760px) {
+
+    .navLeftSec, .navRightSec{
+        visibility: hidden;
+    }
+
+    .openNavBtn, .closeNavBtn {
+        display: block;
+    }
+
+    .mainVidSec {
+        overflow-x: hidden;
+    }
+
+    #myVideo {
+        max-width: none;
+        height: 100vh;    
+    }
+
+    .openNavBtn {
+        left: 30px;
+    }
+
+    .closeNavBtn {
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 45px;
+    }
+
+    #titleSec, .priceUpperArea {
+        width: 90%;
+    }
+
+    .slide-container {
+        height: 500px;
+    }
+
+    #contact form input {
+        width: 45%;
+    }
+
+    .footerCol2 {
+        text-align: center
+    }
+
+    .inputSubmit {
+        width: 60%!important;
+    }
+
+    .slide h4 {
+        font-size: 2.8rem;
+        bottom: 15%;
+    }
+
+    .slide p {
+        font-size: 1.8rem;
+        bottom: 7%;
+    }
+
+}
+
+
+@media screen and (max-width: 570px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .videoBtn,
+    .photoBtn {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+   .nav {
+        height: 120px;
+    }
+
+    .logoAnimation {
+        top: 0px!important;
+        width: 208px!important;
+    }
+
+    .navLogo {
+        top: 180%;
+    }
+
+    .slide-container {
+        height: 395px;
+    }
+
+    .videoArea {
+        gap: 0.2rem;
+    }
+
+    .videoArea .flexItem {
+        width: 100%!important;
+    }
+
+    .videoBtn,
+    .photoBtn {
+        font-size: 18px;
+    }
+
+    .videoBtn {
+        padding: 1rem 1.5rem;
+    }
+
+    .photoBtn {
+        padding: 1rem 3rem;
+    }
+
+
+    .imageGallery {
+            flex-wrap: wrap;
+    }
+
+    .footTop p, .footTop span {
+        font-size: 16px;
+    }
+
+    .listDay,
+    .listTime {
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 395px) {
+
+    #titleSec h1, #pricing h2, #contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+    }
+
+    #VideoSec h2, 
+    #photoSec h2 {
+        font-size: 1.7rem;
+        padding: 0 1rem;
+    }
+
+    .videoBtn,
+    .photoBtn {
+        font-size: 16px;
+    }
+
+    .videoBtn {
+        padding: 1rem 1.2rem;
+    }
+
+    .photoBtn {
+        padding: 1rem 2.7rem;
+    }
+
+    .priceBtnSec {
+        gap: 0.5rem;
+    }
+
+    .slide-container {
+        height: 325px;
+    }
+
+    .slide h4 {
+        font-size: 2.5rem;
+    }
+
+    .slide p {
+        font-size: 1.2rem;
+    }
+
+    .arrow {
+        font-size: 25px;
+        padding: 4px 16px;
+    }
+}

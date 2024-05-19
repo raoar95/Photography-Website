@@ -1,4 +1,18 @@
 /* Responsive CSS */
+@media screen and (max-width: 1275px) {
+
+    .mainVidSec {
+        overflow-x: hidden;
+    }
+
+    #myVideo {
+        max-width: none;
+        height: 100vh;   
+    }
+
+} 
+
+
 
  @media screen and (max-width: 850px) {
 
@@ -16,15 +30,6 @@
 
     .openNavBtn, .closeNavBtn {
         display: block;
-    }
-
-    .mainVidSec {
-        overflow-x: hidden;
-    }
-
-    #myVideo {
-        max-width: none;
-        height: 100vh;    
     }
 
     .openNavBtn {
@@ -80,6 +85,10 @@
     .videoBtn,
     .photoBtn {
         font-size: 20px;
+    }
+
+    #myVideo {
+        transform: translate(-35%);    
     }
 
 }
@@ -143,7 +152,7 @@
 @media screen and (max-width: 395px) {
 
     #titleSec h1, #pricing h2, #contact h2 {
-        font-size: 2.5rem;
+        font-size: 2.6rem;
         margin-bottom: 16px;
     }
 
@@ -170,6 +179,15 @@
         gap: 0.5rem;
     }
 
+    .cinCard, .photCard {
+
+    }
+
+    .cinCard p, 
+    .photCard p {
+        font-size: 15px;
+    }
+
     .slide-container {
         height: 325px;
     }
@@ -186,4 +204,6 @@
         font-size: 25px;
         padding: 4px 16px;
     }
+
+    
 }

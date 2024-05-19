@@ -244,6 +244,8 @@ function autoSlideShow() {
   stopAutoSlide = setInterval(nextImgFunc, 3000);
 }
 
+autoSlideShow();
+
 slideContainer.addEventListener("mouseout", autoSlideShow);
 
 function stopSlide() {

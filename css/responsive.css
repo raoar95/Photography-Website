@@ -152,8 +152,7 @@
 @media screen and (max-width: 395px) {
 
     #titleSec h1, #pricing h2, #contact h2 {
-        font-size: 2.6rem;
-        margin-bottom: 16px;
+        font-size: 2.5rem;
     }
 
     #VideoSec h2, 
